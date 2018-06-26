@@ -1,0 +1,119 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "globals": {
+    "ReactDOMServer": true
+  },
+  "rules": {
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "class-methods-use-this": 0,
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "only-multiline"
+      }
+    ],
+    "import/extensions": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "import/no-unresolved": 0,
+    "indent": [
+      "error",
+      4
+    ],
+    "jsx-a11y/no-autofocus": 0,
+    "new-cap": [
+      "error",
+      {
+        "capIsNewExceptions": [
+          "List",
+          "Map",
+          "Set",
+          "Record",
+          "OrderedMap"
+        ]
+      }
+    ],
+    "no-mixed-operators": [
+      "error",
+      {
+        "allowSamePrecedence": true
+      }
+    ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [
+          "_isMounted"
+        ]
+      }
+    ],
+    "react/sort-comp": [
+      2,
+      {
+        "order": [
+          "constructor",
+          "state",
+          "initialState",
+          "static-methods",
+          "lifecycle",
+          "fetching",
+          "everything-else",
+          "rendering"
+        ],
+        "groups": {
+          "fetching": [
+            "fetchDataIfNeded",
+            "fetch.+IfNeeded"
+          ],
+          "rendering": [
+            "renderLoader",
+            "renderError",
+            "renderNoData",
+            "/^render.+$/",
+            "render"
+          ]
+        }
+      }
+    ],
+    "react/require-default-props": 0,
+    "react/prop-types": "error",
+    "react/prefer-stateless-function": "warn",
+    "react/no-unused-prop-types": 0,
+    "react/jsx-indent-props": [
+      "error",
+      4
+    ],
+    "react/jsx-indent": [
+      "error",
+      4
+    ]
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  }
+}
